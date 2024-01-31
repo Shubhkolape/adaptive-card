@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import MyAdaptiveCard from './MyAdaptiveCard';
+import Agent from './Json';
 
 function App() {
+
+  const [data, setdata] = useState(Agent)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1>Adaptive Cards</h1>
+    <MyAdaptiveCard data={data} setdata={setdata}/>
+    </>
+    
   );
 }
 
