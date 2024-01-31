@@ -12,7 +12,7 @@ import * as ACData from 'adaptivecards-templating';
 //     cardData: any;
 // }
 
-const MyAdaptiveCard = ({ card, cardData }) => {
+const AdaptiveCard = ({ card, cardData }) => {
     //   const cardWrapperRef = React.useRef<HTMLDivElement>(null);
 
     const cardWrapperRef = React.useRef(null);
@@ -61,4 +61,4 @@ const MyAdaptiveCard = ({ card, cardData }) => {
     return <div ref={cardWrapperRef} />;
 };
 
-export default MyAdaptiveCard;
+export default AdaptiveCard;

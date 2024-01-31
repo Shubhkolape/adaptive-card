@@ -1,16 +1,17 @@
 import { useState } from 'react';
+import AdaptiveCard from './AdaptiveCard';
 import './App.css';
-import MyAdaptiveCard from './MyAdaptiveCard';
 import Agent from './Json';
 
 function App() {
 
   const [data, setdata] = useState(Agent)
+  console.log(data);
 
   return (
     <>
     <h1>Adaptive Cards</h1>
-    <MyAdaptiveCard data={data} setdata={setdata}/>
+    <AdaptiveCard card={data} cardData={setdata}/>
     </>
     
   );
